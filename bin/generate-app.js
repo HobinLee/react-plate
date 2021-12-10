@@ -14,7 +14,7 @@ if (process.argv.length < 3) {
 const projectName = process.argv[2];
 const currentPath = process.cwd();
 const projectPath = path.join(currentPath, projectName);
-const GIT_REPO = YOUR_GIT_REPO_URL;
+const GIT_REPO = 'https://github.com/hobinlee/react-ts.git';
 
 if (projectName !== ".") {
   try {
