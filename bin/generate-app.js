@@ -47,7 +47,26 @@ async function main() {
     console.log("Removing useless files");
     execSync("npx rimraf ./.git"); // 이제 보일러플레이트 git과 관련된 내용 제거
 
+
+    /*
+      echo "# interview" >> README.md
+      git init
+      git add README.md
+      git commit -m "first commit"
+      git branch -M main
+      git push -u origin main
+    */
+
+    console.log("Initialize git files");
+    execSync(`echo "# ${projectName}" >> README.md`);
+    execSync(`git init`);
+    execSync(`git add README.md`);
+    execSync(`git branch -M main`);
+
     console.log("The installation is done, this is ready to use !");
+    console.log("To connect with your git repository, type this: ");
+    console.log("    git remote add origin https://YOUR_GIT_REPOSITORY.git");
+    console.log("    git push -u origin main")
   } catch (error) {
     console.log(error);
   }
