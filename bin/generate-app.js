@@ -45,7 +45,8 @@ async function main() {
     execSync("yarn"); // package.json에 있는 의존성 설치
 
     console.log("Removing useless files");
-    execSync("npx rimraf ./.git"); // 이제 보일러플레이트 git과 관련된 내용 제거
+    execSync("npx rimraf ./.git"); 
+    execSync("npx rimraf ./.npmignore"); 
 
 
     /*
@@ -61,13 +62,18 @@ async function main() {
     execSync(`echo "# ${projectName}" >> README.md`);
     execSync("git init");
     execSync("git add .");
+    execSync("git reset HEAD -- bin/generate-app.js")
     execSync(`git commit -m "init: initial commit"`);
     execSync("git branch -M main");
 
-    console.log("The installation is done, this is ready to use !");
-    console.log("To connect with your git repository, type this: ");
-    console.log("    git remote add origin https://YOUR_GIT_REPOSITORY.git");
-    console.log("    git push -u origin main")
+    fs.rm(path.join(projectPath, 'bin'), { recursive: true },
+    () => {
+      console.log("The installation is done, this is ready to use !");
+      console.log("To connect with your git repository, type this: ");
+      console.log(`1.   cd ${projectName}`);
+      console.log("2.   git remote add origin https://YOUR_GIT_REPOSITORY.git");
+      console.log("3.   git push -u origin main")
+    });
   } catch (error) {
     console.log(error);
   }
