@@ -1,14 +1,21 @@
 {
-  "name": "react-ts",
+  "name": "@hovlee/react-ts-app",
   "version": "1.0.0",
   "description": "react boiler plate for typescript",
   "main": "index.js",
-  "author": "hobinLee",
+  "author": "hovLee",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hobinlee/react-ts.git"
+  },
   "scripts": {
     "dev": "webpack serve --config webpack.dev.js --progress",
     "build": "webpack --mode production",
     "start": "webpack serve --config webpack.dev.js --progress"
+  },
+  "bin": {
+    "@hovlee/react-ts-app": "./bin/generate-app.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
