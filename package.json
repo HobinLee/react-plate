@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hobinlee/react-ts.git"
+    "url": "https://github.com/hobinlee/react-boilerplate.git"
   },
   "scripts": {
     "dev": "webpack serve --config webpack.dev.js --progress",
