@@ -1,6 +1,6 @@
 {
-  "name": "@hovlee/react-ts",
-  "version": "1.0.5",
+  "name": "hov-react-plate",
+  "version": "1.0.0",
   "description": "react boiler plate for typescript",
   "main": "index.js",
   "author": "hovLee",
@@ -15,7 +15,7 @@
     "start": "webpack serve --config webpack.dev.js --progress"
   },
   "bin": {
-    "@hovlee/react-ts": "./bin/generate-app.js"
+    "hov-react-plate": "./bin/generate-app.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",

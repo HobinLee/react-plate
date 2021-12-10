@@ -7,7 +7,7 @@ const fs = require("fs");
 if (process.argv.length < 3) {
   console.log("You have to provide a name to your app.");
   console.log("For example :");
-  console.log("    npx @hovlee/react-ts my-app");
+  console.log("    npx hov-react-plate my-app");
   process.exit(1);
 }
 
@@ -42,7 +42,7 @@ async function main() {
     }
 
     console.log("Installing dependencies...");
-    execSync("npm"); // package.json에 있는 의존성 설치
+    execSync("yarn"); // package.json에 있는 의존성 설치
 
     console.log("Removing useless files");
     execSync("npx rimraf ./.git"); // 이제 보일러플레이트 git과 관련된 내용 제거
