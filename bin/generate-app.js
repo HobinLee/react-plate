@@ -59,9 +59,10 @@ async function main() {
 
     console.log("Initialize git files");
     execSync(`echo "# ${projectName}" >> README.md`);
-    execSync(`git init`);
-    execSync(`git add README.md`);
-    execSync(`git branch -M main`);
+    execSync("git init");
+    execSync("git add .");
+    execSync(`git commit -m "init: initial commit"`);
+    execSync("git branch -M main");
 
     console.log("The installation is done, this is ready to use !");
     console.log("To connect with your git repository, type this: ");
