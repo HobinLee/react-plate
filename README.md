@@ -1,4 +1,4 @@
 ### Try this boilerplate
 
 ```javascript 
-$ npx hov-react-app [project-name]
+$ npx hov-react-plate [project-name]
